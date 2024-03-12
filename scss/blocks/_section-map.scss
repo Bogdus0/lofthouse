@@ -1,0 +1,50 @@
+.section-map {
+    padding: 180px 0;
+    position: relative;
+   
+    &::before{
+        content: "V";
+        top: 180px;
+        right:calc(50% + 555px);
+        transform: translate(50%,0);
+        z-index: -1;
+ 
+        @include decorNumber;
+        line-height: 1;
+    }
+    
+    @include mediaTablet{
+        padding:90px 0;
+        &::before{
+            display: none;
+        }
+
+    }
+    
+}
+
+.section-map__title {
+    margin-bottom: 88px;
+
+
+    @include mediaTablet{
+        margin-bottom: 44px;
+        
+
+    }
+}
+.section-map__map{
+    
+    
+}
+
+.map {
+   // background-color: $grey;
+  //  height: 358px;
+    //max-width: 800px;
+    
+}
+iframe{
+    height: 60vh;
+    width: 80vw;
+}

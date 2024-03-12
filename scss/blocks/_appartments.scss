@@ -1,0 +1,82 @@
+.appartemnts {
+    position: relative;
+    &::before{
+        content: "III";
+        top: 0;
+        right:calc(50% + 555px);
+        transform: translate(50%,0);
+        @include decorNumber;
+    }
+}
+
+.appartments_title {
+    margin-bottom: 88px;
+
+    @include mediaTablet{
+        margin-bottom: 44px;
+    }
+}
+
+.appartments_cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    
+    gap: 30px;
+    @include mediaTablet{
+        grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    }
+}
+.card {
+    display: inline-block;
+    position: relative;
+
+    &::before{
+        content: "";
+
+       position: absolute;
+       left:0;
+       top:0;
+       width:100%;
+       height:100%;
+
+
+        background:linear-gradient(180deg, rgba(36,43,51,0)0%, #242b33 100%);
+    }
+    &::after{
+        opacity: 0;
+        content:"";
+        position: absolute;
+        left:15px;
+        top:15px;
+        right:15px;
+        bottom: 15px;
+       
+        border: 3px double rgba(255,255,255,0.3);
+
+        transition: opacity 0.2s ease-in;
+        
+
+
+    }
+    &:hover::after{
+        opacity: 1;
+    }
+}
+
+.card_title {
+    position: absolute;
+    left: 50px;
+    right: 20px;
+    bottom: 44px;
+
+    font-size: 24px;
+    
+
+    @include mediaTablet{
+        font-size: 24px;
+        left: 38px;
+        bottom: 30px;
+    }
+
+}  

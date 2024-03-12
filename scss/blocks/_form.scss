@@ -1,0 +1,42 @@
+
+.form_input {
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+
+    &::placeholder{
+        color: #fff;
+    }
+
+    &:focus{
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.form_privacy {
+    font-size: 13px;
+    color: #ffffffa2;
+    text-align: center;
+    line-height: 1.23;
+
+    &--bottom{
+        @include mediaTablet{
+            grid-row: 4 / 5;
+        }
+    }
+}
+.form_btn {
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    background-color: $accent;
+    padding: 12px;
+
+    &:hover{
+        background-color: saturate($accent,15%);
+    }
+}
